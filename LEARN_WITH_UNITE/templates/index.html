@@ -1,0 +1,876 @@
+{% load static %}
+{% load widget_tweaks %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Learn with Unite</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/form.css' %}" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:unitetaboraschool@gmail.com">unitetaboraschool@gmail.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+255 676 393 575</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{%url 'LEARN:index' %}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Learn with Unite<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{%url 'LEARN:index' %}">Home</a></li>
+          
+          <li class="dropdown"><a href="#"><span>STUDY NOTES</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>Physics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:phy_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Chemistry</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:chem_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Biology</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:bio_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Mathematics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:math_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>English</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:lang_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Kiswahili</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:kis_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Geography</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:geo_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>History</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'NOTES:his_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Civics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Litreture</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="#">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Economics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  
+                  <li><a href="{%url 'NOTES:eco_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>            
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>STUDY TUTORIALS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>Physics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:phy5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Chemistry</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:chem5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Biology</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:bio5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Mathematics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:math5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>English</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:lang5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Kiswahili</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:kis5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Geography</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:geo5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>History</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'TUTORIALS:his5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Civics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Litreture</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Economics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  
+                  <li><a href="{%url 'TUTORIALS:eco5_list' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>EXAMINATIONS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>Physics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:phy_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Chemistry</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:chem_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Biology</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:bio_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Mathematics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:math_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>English</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:lang_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Kiswahili</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:kis_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Geography</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:geo_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>History</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'EXAMS:his_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Civics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Litreture</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Economics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  
+                  <li><a href="{%url 'EXAMS:eco_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>            
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>SYLLABUS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>Physics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:phy_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Chemistry</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:chem_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Biology</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:bio_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Mathematics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:math_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>English</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:lang_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Kiswahili</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:kis_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Geography</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:geo_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>History</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  <li><a href="{%url 'SYLLABUS:his_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Civics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Litreture</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Form One</a></li>
+                  <li><a href="#">Form Two</a></li>
+                  <li><a href="#">Form Three</a></li>
+                  <li><a href="#">Form Four</a></li>
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Economics</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  
+                  <li><a href="{%url 'SYLLABUS:eco_form5' %}">Form Five</a></li>
+                  <li><a href="#">Form Six</a></li>
+                </ul>
+              </li>            
+            </ul>
+          </li>
+
+
+          <li><a href="#contact">Contact</a></li>
+
+          <li>
+            <div class="container justify-content-center">
+             {% if user.is_authenticated %}
+             
+              <a href="{%url 'LEARN:logout' %}"><span>Logout</span></a>
+             {% else %}
+             <a href="{%url 'LEARN:login' %}"><span>Login</span></a>
+             {% endif %}
+            </div>
+        </li>
+          
+          
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  {% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Welcome to <span>Unite Learning Programme</span></h2>
+          <p>We aim at providing online education programmes through study notes, tutorials and exams. This helps to simplify the learning process to Unite Scholars and African Students</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started">Learn more about us</a>
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="{% static 'assets/img/front8.jpg' %}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100" style="height: 312px; object-fit:cover;">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-camera-video"></i></div>
+              <h4 class="title"><a  class="stretched-link">Study Tutorials</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-book"></i></div>
+              <h4 class="title"><a  class="stretched-link">Study Notes</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a  class="stretched-link">Exams</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
+              <h4 class="title"><a  class="stretched-link">Reference</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>we stand as a beacon of unity, diversity, and collaboration within our school community. Our club is more than just an organization; it's a vibrant community where students come together to foster friendships, celebrate diversity, and create positive change.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <h3>UNITE LEARNING PROGRAM</h3>
+            <img src="{% static 'assets/img/unite_about.jpg' %}" class="img-fluid rounded-4 mb-4" alt="">
+            <p>To break the vicious cycle of poverty, oppression, and wasted human potential by empowering uniquely talented yet impoverished youth across Tanzania with access to education through A-Levels, university, and beyond, and — through our engaged team of international advisors and mentors — nurture creative and independent thinking and the development of personal and professional life skills necessary for success as active, engaged, and productive global citizens.</p>
+           
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                WHAT WE BELIEVE.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> In UNITING people across cultures and disciplines to co-create effective solutions to the world’s problems.</li>
+                <li><i class="bi bi-check-circle-fill"></i> In gender equality and the critical importance of quality education.</li>
+                <li><i class="bi bi-check-circle-fill"></i> In the power of collaboration, mentorship, professionalism and volunteerism. </li>
+              </ul>         
+
+              <div class="position-relative mt-4">
+                <img src="{% static 'assets/img/photo2.jpg' %}" class="img-fluid rounded-4" alt="">
+                <a href="#" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+            <img src="{% static 'assets/img/stats-img.svg' %}" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Unite Scholars</strong></p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> </p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="53" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Unite Club Members</strong> </p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Stats Counter Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+        <a href="#" class="glightbox play-btn"></a>
+        <h3>Unite Africa with the World</h3>
+        <p> WE MUST ASK OURSELVES…
+
+          “WHAT WOULD LOVE DO?” 
+          
+          AND THEN, WE MUST ACT..</p>
+        <a class="cta-btn" href="#footer">Call To Action </a>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    
+
+    
+
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4">
+
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>unitetaboraschool@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+255 676 393 575</p>
+                  <p>+255 715 353 219</p>
+                  <p>+255 744 664 500</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Open Hours:</h4>
+                  <p>24 Hrs</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form method="post"  class="php-email-form" action="{%url 'LEARN:index' %}">
+              {% csrf_token %} 
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  {% render_field form.first_name class="form-control" placeholder="Your Name" %}
+                  
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  {% render_field form.email class="form-control" placeholder="E mail" %}
+                  
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                {% render_field form.subject class="form-control" placeholder="subject" %}
+                
+              </div>
+              <div class="form-group mt-3">
+                {% render_field form.message class="form-control" placeholder="message" %}
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="sent-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Learn with Unite</span>
+          </a>
+         
+          <div class="social-links d-flex mt-4">
+        
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>   
+
+        
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+           
+            Tanzania <br><br>
+            <strong>Phone:</strong> 
+            <p>+255 676 393 575</p>
+            <p>+255 715 353 219</p>
+            <p>+255 744 664 500</p><br>
+            <strong>Email:</strong> unitetaboraschool@gmail.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  {% endblock %}
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <!-- <script src="{% static 'assets/js/form.js' %}"></script> -->
+
+</body>
+
+</html>

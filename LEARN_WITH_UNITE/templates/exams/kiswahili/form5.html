@@ -1,0 +1,81 @@
+{% extends "index.html"%}
+
+{% block content %}
+{% load static %}
+{% load widget_tweaks %}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Kiswahili Language</h2>
+            <h4 style="color: #fff;">-EXAMINATIONS-</h4>
+            <p>Haijalishi mwendo wako wa polepole ilhali tu usisimame.
+              (s)
+              It does not matter how slowly you go as long as you do not stop.</p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="{% static 'assets/img/kiswahili/form5/kiswahili.jpg' %}" class="img-fluid" alt="" data-aos="zoom-out"
+              data-aos-delay="100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          
+        </ol>
+
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+  {% block kis-content %} 
+  <!-- ======= Blog Section ======= -->
+  <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+      <div class="posts-list">   
+        <nav>
+          <div class="container">
+
+            <ol style="list-style: none; text-align: center;" > 
+            {% for kiswahili_form5 in kiswahili_form5_list %}
+
+              <hr>
+              <li>
+                <h3><a href="{{kiswahili_form5.exams.url}}"><i class="bi bi-file-earmark-text"></i>{{kiswahili_form5.title}}</a></h3>
+                {% if user.is_authenticated %}
+                <div class="dlt"><a href="{% url 'EXAMS:delete_kis5' pk=kiswahili_form5.pk %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete the file??')"><span>delete</span><i class="bi bi-trash3-fill"></i></a></div>
+                {% endif %}
+              </li>              
+
+            {% endfor %}
+            </ol>
+                        
+          </div>
+        </nav>
+      </div><!-- End blog posts list -->
+    </div>
+
+  </section><!-- End Blog Section -->
+
+</main><!-- End #main -->
+
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+{% if user.is_authenticated %}
+<a href="{% url 'EXAMS:create_kis5' %}" class="open-button"  style="border: solid rgb(233, 228, 228) 1.2px; background: rgba(38, 110, 66, 0.856); color: #fff; padding: 10px; border-radius: 22px; width: 211px; font-family: Arial, Helvetica, sans-serif; transition: all 0.3s ease-in;"><i class="bi bi-download"></i>  IMPORT EXAMS </a>
+{% endif %}
+
+{% endblock %}
+
+{% endblock %}

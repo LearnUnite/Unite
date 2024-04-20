@@ -1,0 +1,51 @@
+{% extends 'tutorials/history/form5_list.html' %}
+
+{% block his-content %}
+{% load static %}
+
+<div class="head-topic" style="align-items: center; align-content: center; text-align: center;">
+ <h1>{{ object.name }}</h1>
+</div>
+
+<section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+      <div class="col gy-4 posts-list">
+    
+        {% for tutorial in object.history5tutorial_set.all %}
+            
+          <div class="container" style="align-items: center; align-content: center; text-align: center;" >
+            <div class="col-xl-4 col-md-6">
+                <article>
+                  <div class="post-img">
+
+                    <video class="img-fluid" preload="auto" autoplay="autoplay" autoplay loop muted class="embed-responsive embed-responsive-16by9" controls = "controls">
+                      <source  src="{{tutorial.video.url}}" type="video/mp4" />   
+                  </video>
+                                   
+                  </div>
+                  <h2 class="title">
+                 {{ tutorial.title }}
+                  </h2>
+                  <p>{{ tutorial.caption }}</p>
+                  {% if user.is_authenticated %}
+                  <div class="dlt"><a href="{% url 'TUTORIALS:tutorial_delete_his5' pk=tutorial.pk %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete the file??')"><span>delete</span><i class="bi bi-trash3-fill"></i></a></div>
+                  {% endif %}
+
+                </article>
+                <hr>
+              </div><!-- End post list item -->
+            </div>
+
+
+        {% endfor %}
+    </div>
+</div>
+    
+{% if user.is_authenticated %}
+    <a href="{% url 'TUTORIALS:tutorial_add_his5' %}" class="open-button"  style="border: solid rgb(233, 228, 228) 1.2px; background: rgba(38, 110, 66, 0.856); color: #fff; padding: 10px; border-radius: 22px; width: 211px; font-family: Arial, Helvetica, sans-serif; transition: all 0.3s ease-in;"><i class="bi bi-download"></i>  IMPORT TUTORIALS </a>
+{% endif %}
+
+
+
+{% endblock %}

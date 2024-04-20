@@ -1,0 +1,86 @@
+{% extends "index.html"%}
+
+{% block content %}
+{% load static %}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Economics</h2>
+            <p>“Nothing happens until something moves.”
+              ― Albert Einstein</p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="{% static 'assets/img/physics/form5/physics.jpg' %}" class="img-fluid" alt="" data-aos="zoom-out"
+              data-aos-delay="100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>IMPORT NOTES</li>
+        </ol>
+
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Blog Section ======= -->
+  <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row gy-4 posts-list">
+
+        {% for nb in note %}
+
+        <div class="col-xl-4 col-md-6">
+          <article>
+            <div class="post-img">
+              <img src="{{nb.picture.url}}" alt="" class="img-fluid">
+            </div>
+            <h2 class="title">
+              <a href="{{nb.notes.url}}">{{nb.title}}</a>
+            </h2>
+          </article>
+        </div><!-- End post list item -->
+
+        {% endfor %}
+
+      </div><!-- End blog posts list -->
+    </div>
+
+  </section><!-- End Blog Section -->
+
+</main><!-- End #main -->
+
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1 class="head">Import Notes</h1>
+
+    <label for="email"><b>Title of Notes</b></label>
+    <input type="text" placeholder="Title" name="email" required>
+
+    <label for="psw"><b>Picture</b></label>
+    <input type="password" placeholder="Cover Picture" name="psw" required>
+
+    <label for="email"><b>Notes</b></label>
+    <input type="text" placeholder="Notes File" name="email" required>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+{% endblock %}

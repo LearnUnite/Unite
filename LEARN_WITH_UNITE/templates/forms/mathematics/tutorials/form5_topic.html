@@ -1,0 +1,18 @@
+{% extends 'tutorials/mathematics/form5_list.html' %}
+
+{% block math-content %}
+{% load static %}
+{% load bootstrap3 %}
+
+<div class="container">
+<h1>Add Topic</h1>
+<div class="form-popup-a1" id="myForm" style="padding-left: 50px; align-items: center;">
+<form method="post" class="form-container" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn">Submit</button>
+</form>
+</div>
+    
+
+{% endblock %}

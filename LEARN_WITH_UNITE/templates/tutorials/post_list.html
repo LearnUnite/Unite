@@ -1,0 +1,87 @@
+{% extends "index.html"%}
+
+{% block content %}
+
+{% load static %}
+{% load widget_tweaks %}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Advanced Physics</h2>
+            <p>“Nothing happens until something moves.”
+              ― Albert Einstein</p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="{% static 'assets/img/physics/form5/physics.jpg' %}" class="img-fluid" alt="" data-aos="zoom-out"
+              data-aos-delay="100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          
+        </ol>
+
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+
+
+
+{% block phy-content %} 
+
+<section id="blog" class="blog">
+  <div class="container" data-aos="fade-up">
+
+    <div class="posts-list">   
+      <nav>
+        <div class="container" style="align-items: center; align-content: center; text-align: center;">
+          <h1>Topics</h1>
+
+          <ol style="list-style: none; text-align: center;" > 
+
+        {% for topic in object_list %}
+        <hr>
+              <li>
+                <li><a href="{% url 'TUTORIALS:phy5_detail' topic.id %}">{{ topic.name }}</a></li>
+              </li>  
+            
+        {% endfor %}
+        <hr>
+    </ul>
+    
+    <a href="{% url 'TUTORIALS:topic_add' %}" class="open-button"  style="border: solid rgb(233, 228, 228) 1.2px; background: rgba(38, 110, 66, 0.856); color: #fff; padding: 10px; border-radius: 22px; width: 211px; font-family: Arial, Helvetica, sans-serif; transition: all 0.3s ease-in;"><i class="bi bi-download"></i>  IMPORT TOPICS </a>
+
+
+  </div>
+
+
+<style>
+    .post{
+        border: 2px solid rgba(140, 0, 255, 0.352);
+        padding-top: 20px;
+        padding: 2px 3px 6px;
+        padding-bottom: 7px;
+        border-radius: 20px;
+      
+    }
+    .centerstage{
+        padding-top: 10px;
+    }
+</style>
+
+
+
+
+{% endblock %}
+
+{% endblock %}

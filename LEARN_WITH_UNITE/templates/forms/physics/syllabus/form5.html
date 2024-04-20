@@ -1,0 +1,29 @@
+{% extends "syllabus/physics/form5.html"%}
+
+{% block phy-content %}
+{% load static %}
+{% load widget_tweaks %} 
+
+
+<div class="form-popup-1" id="myFormh" style="padding-left: 50px; align-items: center;">
+  <form method="post"  class="form-container" enctype="multipart/form-data">
+    {% csrf_token %} 
+    <h1 class="head">Import File</h1>
+
+    <label for="email"><b>Title of File</b></label>
+    {% render_field form.title class="form-control" placeholder="Title" %}
+    
+    
+
+    <label for="email"><b>File</b></label>
+    {% render_field form.file class="form-control imp" %}
+    
+    
+
+    <button type="submit" class="btn">Submit</button>
+    <a href="{%url 'SYLLABUS:phy_form5' %}"><button type="button" class="btn cancel"> Close</button></a>
+  </form>
+</div>
+
+{% endblock %}
+

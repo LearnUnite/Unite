@@ -1,0 +1,27 @@
+{% extends "exams/economics/form5.html"%} 
+
+{% block eco-content %}
+{% load static %}
+{% load widget_tweaks %} 
+
+<div class="form-popup-1" id="myForm" style="padding-left: 50px; align-items: center;">
+  <form method="post"  class="form-container" enctype="multipart/form-data">
+    {% csrf_token %} 
+    <h1 class="head">Import Exams</h1>
+
+    <label for="email"><b>Title of Exams</b></label>
+    {% render_field form.title class="form-control" placeholder="Title" %}
+    
+
+    <label for="email"><b>Exams</b></label>
+    {% render_field form.exams class="form-control imp" %}
+    
+    
+
+    <button type="submit" class="btn">Submit</button>
+    <a href="{%url 'EXAMS:eco_form5' %}"><button type="button" class="btn cancel"> Close</button></a>
+  </form>
+</div> 
+
+{% endblock %}
+
